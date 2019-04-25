@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Songs</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="div_header" class="header"></div>
+    <div id="div_content" class="container container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <h3>Add Song</h3>
+                <form id="form_song">
+                    <label for="title">Title</label>
+                    <input required type="text" class="form-control" name="title" id="title" />
+                    <label for="artist">Artist</label>
+                    <select required class="form-control" name="artist" id="artist">
+                        <option>--- select ---</option>
+                        <option value=0>Other</option>
+                    </select>
+                    <div id="div_artist_other">
+                        <!-- Specify * --><br>
+                        <input type="text" placeholder="specify artist" class="form-control" id="artist_other" name="artist_other" />
+                    </div>
+                    <label for="label">Label</label>
+                    <select required class="form-control" name="label" id="label">
+                        <option>--- select ---</option>
+                        <option value="0">Other</option>
+                    </select>
+                    <div id="div_label_other">
+                            <br>
+                            <input type="text" placeholder="specify label" class="form-control" id="label_other" name="label_other" />
+                        </div>
+                    <label for="date">Release Date</label>
+                    <input required type="text" class="form-control" name="date" id="date" />
+                    
+                    <label for="genre">Genre</label>
+                    <select required class="form-control" name="genre" id="genre">
+                        <option>--- select ---</option>
+                        <option value="0">Other</option>
+                    </select>
+                    <div id="div_genre_other">
+                        <!-- Specify * --> <br>
+                        <input type="text" placeholder="specify genre" class="form-control" id="genre_other" name="genre_other" />
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary" />
+                    <input type="reset" class="btn btn-warning" />
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h3>List of Songs</h3>
+                <table class="table table-hover">
+                    <tr>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Label</th>
+                        <th>Date</th>
+                        <th>Genre</th>
+                    </tr>
+                    <tbody id="tbody_songs"></tbody>
+                </table>
+            </div>
+        </div> <!-- end row -->
+    </div>
+    <br>
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://github.com/granaderos"> GRANADEROS</a>
+        </div>
+    </footer>
+          
+</body>
+</html> 
